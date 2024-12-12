@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Product Preview Card</title>
+
+    <!-- Import Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkCyan: "hsl(158, 36%, 37%)",
+              cream: "hsl(30, 38%, 92%)",
+              veryDarkBlue: "hsl(212, 21%, 14%)",
+              darkGrayishBlue: "hsl(228, 12%, 48%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              fraunces: ["Fraunces", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="font-montserrat bg-cream flex items-center justify-center min-h-screen"
+  >
+    <main
+      class="flex flex-col md:flex-row max-w-[350px] md:max-w-[600px] bg-white rounded-xl overflow-hidden"
+    >
+      <!-- Left Image Section -->
+      <div class="w-full md:w-1/2">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/image-product-desktop.jpg"
+          />
+          <img
+            src="images/image-product-mobile.jpg"
+            alt="Gabrielle Essence Eau De Parfum"
+            class="w-full h-full object-cover"
+          />
+        </picture>
+      </div>
+
+      <!-- Right Text Section -->
+      <div class="p-6 md:p-10 w-full md:w-1/2">
+        <h2 class="text-sm tracking-widest uppercase text-darkGrayishBlue">
+          Perfume
+        </h2>
+        <h1 class="mt-2 text-2xl md:text-3xl font-fraunces text-veryDarkBlue">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="mt-4 text-sm text-darkGrayishBlue">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <!-- Price Section -->
+        <div class="flex items-center gap-4 mt-6">
+          <span class="text-2xl font-fraunces text-darkCyan">$149.99</span>
+          <span class="line-through text-darkGrayishBlue">$169.99</span>
+        </div>
+
+        <!-- Button Section -->
+        <button
+          class="flex items-center justify-center w-full py-3 mt-6 text-white transition bg-darkCyan rounded-lg hover:bg-veryDarkBlue"
+        >
+          <svg
+            width="15"
+            class="w-5 h-5 mr-2"
+            height="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+              fill="#FFF"
+            />
+          </svg>
+          Add to Cart
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
